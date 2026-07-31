@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Paleta Vallenar Decohogar — warm cream, coral, sage, terracota */
+  --background: oklch(0.985 0.012 60);          /* #fffbf5 warm cream white */
+  --foreground: oklch(0.22 0.045 30);           /* #482113 dark brown */
+  --card: oklch(1 0 0);                          /* #ffffff */
+  --card-foreground: oklch(0.22 0.045 30);      /* #482113 */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.045 30);
+  --primary: oklch(0.68 0.155 35);              /* #f17b5d coral terracota */
+  --primary-foreground: oklch(0.99 0.01 60);    /* #fffbf5 */
+  --secondary: oklch(0.78 0.04 110);            /* #b4ba8f sage green */
+  --secondary-foreground: oklch(0.22 0.045 30);
+  --muted: oklch(0.94 0.015 55);                /* #eee4db beige cream */
+  --muted-foreground: oklch(0.45 0.04 35);      /* #986d47 medium brown */
+  --accent: oklch(0.80 0.065 65);               /* #cea170 tan */
+  --accent-foreground: oklch(0.22 0.045 30);
+  --destructive: oklch(0.55 0.20 25);           /* warm red-brown */
+  --border: oklch(0.91 0.018 55);               /* light beige border */
+  --input: oklch(0.91 0.018 55);
+  --ring: oklch(0.68 0.155 35);                 /* coral ring */
+  --chart-1: oklch(0.68 0.155 35);              /* coral */
+  --chart-2: oklch(0.78 0.04 110);              /* sage */
+  --chart-3: oklch(0.80 0.065 65);              /* tan */
+  --chart-4: oklch(0.62 0.18 145);              /* vibrant green */
+  --chart-5: oklch(0.45 0.04 35);               /* brown */
+  --sidebar: oklch(0.97 0.012 60);
+  --sidebar-foreground: oklch(0.22 0.045 30);
+  --sidebar-primary: oklch(0.68 0.155 35);
+  --sidebar-primary-foreground: oklch(0.99 0.01 60);
+  --sidebar-accent: oklch(0.94 0.015 55);
+  --sidebar-accent-foreground: oklch(0.22 0.045 30);
+  --sidebar-border: oklch(0.91 0.018 55);
+  --sidebar-ring: oklch(0.68 0.155 35);
+
+  /* Custom brand tokens */
+  --vn-coral: #f17b5d;
+  --vn-coral-light: #ff9d73;
+  --vn-pink: #f7c1bf;
+  --vn-sage: #b4ba8f;
+  --vn-tan: #cea170;
+  --vn-cream: #eee4db;
+  --vn-cream-yellow: #fcf3d4;
+  --vn-warm-bg: #fffbf5;
+  --vn-brown: #482113;
+  --vn-brown-dark: #4d2714;
+  --vn-brown-med: #986d47;
+  --vn-green: #00bf63;
+  --vn-blue-gray: #304254;
+}
+
+.dark {
+  /* Modo oscuro: paleta adaptada para máxima legibilidad */
+  --background: oklch(0.18 0.015 35);              /* marrón muy oscuro */
+  --foreground: oklch(0.96 0.012 60);              /* crema claro */
+  --card: oklch(0.24 0.02 35);                     /* card marrón oscuro pero más claro que el bg */
+  --card-foreground: oklch(0.96 0.012 60);         /* texto crema en cards */
+  --popover: oklch(0.24 0.02 35);
+  --popover-foreground: oklch(0.96 0.012 60);
+  --primary: oklch(0.75 0.16 35);                  /* coral más brillante para contraste */
+  --primary-foreground: oklch(0.15 0.015 35);
+  --secondary: oklch(0.45 0.04 110);               /* sage oscuro */
+  --secondary-foreground: oklch(0.96 0.012 60);
+  --muted: oklch(0.30 0.02 35);
+  --muted-foreground: oklch(0.78 0.04 60);         /* tan claro */
+  --accent: oklch(0.50 0.07 60);                   /* tan medio */
+  --accent-foreground: oklch(0.96 0.012 60);
+  --destructive: oklch(0.65 0.20 25);
+  --border: oklch(0.35 0.02 35);                   /* borde visible */
+  --input: oklch(0.30 0.02 35);
+  --ring: oklch(0.75 0.16 35);
+  --chart-1: oklch(0.75 0.16 35);
+  --chart-2: oklch(0.70 0.04 110);
+  --chart-3: oklch(0.75 0.065 65);
+  --chart-4: oklch(0.65 0.18 145);
+  --chart-5: oklch(0.78 0.065 60);
+  --sidebar: oklch(0.22 0.02 35);
+  --sidebar-foreground: oklch(0.96 0.012 60);
+  --sidebar-primary: oklch(0.75 0.16 35);
+  --sidebar-primary-foreground: oklch(0.96 0.012 60);
+  --sidebar-accent: oklch(0.30 0.02 35);
+  --sidebar-accent-foreground: oklch(0.96 0.012 60);
+  --sidebar-border: oklch(0.35 0.02 35);
+  --sidebar-ring: oklch(0.75 0.16 35);
+
+  /* === BRAND TOKENS — adaptados para modo oscuro === */
+  /* Los fondos claros se vuelven oscuros, los textos oscuros se vuelven claros */
+  --vn-coral: #ff8d6f;                  /* coral más brillante para modo oscuro */
+  --vn-coral-light: #ffa887;            /* coral claro más vivo */
+  --vn-pink: #f7c1bf;                   /* se mantiene */
+  --vn-sage: #c4caa0;                   /* sage más claro para visibilidad */
+  --vn-tan: #e0b888;                    /* tan más claro */
+  --vn-cream: #2a2018;                  /* crema → marrón muy oscuro (para fondos de imagen) */
+  --vn-cream-yellow: #3a2e18;           /* crema amarillo → marrón oscuro cálido */
+  --vn-warm-bg: #1f1812;                /* warm bg → fondo oscuro cálido */
+  --vn-brown: #f5e8d8;                  /* brown → crema claro (texto sobre oscuro) */
+  --vn-brown-dark: #fffbf5;             /* brown dark → blanco crema (máximo contraste) */
+  --vn-brown-med: #d4b896;              /* brown med → tan claro (texto secundario) */
+  --vn-green: #00d970;                  /* green más brillante */
+  --vn-blue-gray: #6a8aa8;              /* blue gray más claro */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
