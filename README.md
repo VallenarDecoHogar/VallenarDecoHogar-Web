@@ -1,2 +1,2 @@
 # VallenarDecoHogar-Web
-Mi web personal
+Tienda online de aromaterapia, esoterismo y decoración
